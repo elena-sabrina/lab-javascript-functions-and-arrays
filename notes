@@ -1,11 +1,12 @@
 // Iteration #1: Find the maximum
+
 function maxOfTwoNumbers(a, b) {
   if (a > b) {
     return a;
   } else {
     return b;
   }
-}
+};
 
 // Iteration #2: Find longest word
 const words = [
@@ -19,49 +20,45 @@ const words = [
 ];
 
 function findLongestWord(list) {
-  if (list.length === 0) {
+  if (a.length === 0) {
     return null;
   } else {
-    let longestWord = list[0];
-    for (let item of list) {
-      if (item.length > longestWord.length) {
-        longestWord = item;
-      }
+  let largestWord = list[0];
+  for let item of list {
+    if (item.length > largestWord.length){
+      largestWord = item;
     }
-    return longestWord;
   }
-}
+  return largestWord;
+  }
+};
+
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers(number) {
-  let sum = 0;
-  if (number.length === 0) {
-    return 0;
-  } else {
-    for (let item of number) {
-      sum += item;
-    }
+function sumofNumbers(array) {
+  var sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   }
   return sum;
-}
+};
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(number) {
-  if (number.length === 0) {
-    return null;
-  }
-  if (number.length === 1) {
-    return number[i];
+
+function averageNumbers (list){
+  if (list.length === 0) {
+    return null:
   } else {
-    const sum = sumNumbers(number);
-    const average = sum / list.length;
-    return average;
+  const sumOfAllNumbers = sumofNumbers (list);
+  const average =sumOfAllNumbers /list.length;
+  return average;
   }
 }
 
@@ -79,22 +76,6 @@ const wordsArr = [
   "palace"
 ];
 
-function averageWordLength(list) {
-  if (!list.length) {
-    return null;
-  }
-  if (list.length === 1) {
-    return list[0];
-  }
-  let getAverageWordLength;
-  let sum;
-  for (let item of list) {
-    sum += item.length;
-    getAverageWordLength / list.length;
-  }
-  return getAverageWordLength;
-}
-
 // Iteration #5: Unique arrays
 const wordsUnique = [
   "crab",
@@ -110,17 +91,18 @@ const wordsUnique = [
   "bring"
 ];
 
-function uniquifyArray(list) {
-  if (!list.length) {
+function uniquifyArray (list){
+  if (!list.length){
     return null;
   }
-  const uniquifiedlist = [];
+  const uniquifiedList = [];
   for (let item of list) {
-    if (uniquifiedlist.indexOf(item) === -1) {
-      uniquifiedlist.push(item);
-    }
-  }
-  return uniquifiedlist;
+//indexOf checks if item is already in list. If not = -1 so we want to push it
+  if (uniquifiedList.indexOf(item)=== -1) {
+    //or if (uniquifiedList.includes(item === 1))
+    uniquifiedList.push(item)}
+}
+  return uniquifiedList;
 }
 
 // Iteration #6: Find elements
@@ -135,15 +117,16 @@ const wordsFind = [
   "disobedience"
 ];
 
-function doesWordExist(list, word) {
+function doesWordExist (list, wordToFind) {
   if (!list.length) {
     return null;
   }
   for (let item of list) {
-    if (item === word) {
+    if (item === wordToFind) {
       return true;
     }
   }
+
   return false;
 }
 
@@ -162,14 +145,14 @@ const wordsCount = [
   "matter"
 ];
 
-function howManyTimes(list, word) {
-  let amountOfTimes = 0;
+function countRepetition (list, wordToFind) {
+  let accumulator = 0;
   for (let item of list) {
-    if (item === word) {
-      amountOfTimes += 1; // ++1
+    if (item === wordToFind) {
+      accumulator ++;
     }
   }
-  return amountOfTimes;
+  return accumulator;
 }
 
 // Iteration #8: Bonus
